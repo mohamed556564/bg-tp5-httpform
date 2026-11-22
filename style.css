@@ -186,12 +186,11 @@ textarea.form_field {
     color: #777;
 }
 
-.submit_zone {
-    text-align: center;
-    margin: 30px 0 50px 0;
-}
-
 #join{
+    display: block;
+    margin: 30px auto 20px;
+    font-family: inherit;
+
     background: linear-gradient(135deg, #e8405e, #c42a4a);
     color: white;
     font-size: 16px;
@@ -201,13 +200,7 @@ textarea.form_field {
     border-radius: 50px;
     box-shadow: 0 6px 16px rgba(232, 64, 94, 0.4);
     cursor: pointer;
-    transition: transform 0.2s, box-shadow 0.2s;
-}
 
-.btn{
-    display: flex;
-    justify-content: center;
-    margin: 30px 0 50px 0;
 }
 
 #join:hover {
