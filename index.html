@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CinePass</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+    <header>
+        <h1>🎬 CinePass</h1>
+        <p>inscription au club de cinema - Saison 2025</p>
+    </header>
+
+    <main class="content">
+        <p id="info">💡 Rejoignez notre club et profitez de tarifs reduits, d'avant-premiere exclusives et de rencontre
+            avec des realisateur !</p>
+
+        <form action="traitement.php" method="post" enctype="multipart/form-data">
+            <section class="section">
+                <h2>👤 Informations personnelles</h2>
+
+                <div class="row">
+                    <div class="form_group">
+                        <label class="form_label">Prénom :</label>
+                        <input type="text" name="prenom" class="form_field" placeholder="Ex: Ahmed" required>
+                    </div>
+                    <div class="form_group">
+                        <label class="form_label">Nom :</label>
+                        <input type="text" name="nom" class="form_field" placeholder="Ex: Bensalem" required>
+                    </div>
+                </div>
+                <div class="form_group">
+                    <label class="form_label">Adresse email :</label>
+                    <input type="email" name="email" class="form_field" placeholder="votre.email@exemple.com" required>
+                </div>
+                <div class="form_group">
+                    <label class="form_label">Mot de passe(compte en ligne) :</label>
+                    <input type="password" name="mdp" class="form_field" minlength="8" placeholder="Minimum 8 caracteres" required>
+                </div>
+                <div class="row">
+                    <div class="form_group">
+                        <label class="form_label">Telephone :</label>
+                        <input type="tel" name="tel" class="form_field" placeholder="0555123456">
+                    </div>
+                    <div class="form_group">
+                        <label class="form_label">Date de naissance :</label>
+                        <input type="date" name="date_birth" class="form_field">
+                    </div>
+                </div>
+            </section>
+            <section class="section">
+                <h2>📖 Formule d'abonnement</h2>
+
+                <fieldset class="form_fieldset">
+                    <legend>Choisissez votre formule :</legend>
+
+                    <label class="radio_option">
+                        <input type="radio" name="formule" value="basique" checked>
+                        🥉 Basique - 4 séances/mois (2000 DA/mois)
+                    </label>
+
+                    <label class="radio_option">
+                        <input type="radio" name="formule" value="premium">
+                        🥈 Premium - 10 séances/mois (4500 DA/mois)
+                    </label>
+
+                    <label class="radio_option">
+                        <input type="radio" name="formule" value="illimite">
+                        🥇 Illimité - Séances illimitées (7000 DA/mois)
+                    </label>
+                </fieldset>
+
+                <div class="row">
+                    <div class="form_group">
+                        <label class="form_label">Date de début souhaitée :</label>
+                        <input type="date" name="date_debut" class="form_field">
+                    </div>
+                    <div class="form_group">
+                        <label class="form_label">Durée d'engagement :</label>
+                        <select name="duree" class="form_field">
+                            <option value="">-- Sélectionner --</option>
+                            <option value="3">3 mois</option>
+                            <option value="6">6 mois (-5%)</option>
+                            <option value="12">12 mois (-10%)</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form_group">
+                    <label class="form_label">Nombre d'accompagnants habituels :</label>
+                    <input type="number" name="accompagnants" class="form_field" value="0" min="0" max="5">
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>🎥 Vos preferences cinamatographiques</h2>
+
+                <fieldset class="form_fieldset">
+                    <legend>Genres de films preferes:</legend>
+
+                    <label class="radio_option">
+                        <input type="checkbox" name="genres[]" value="action">
+                        💥 Action / Aventure
+                    </label>
+
+                    <label class="radio_option">
+                        <input type="checkbox" name="genres[]" value="comedie">
+                        😄 Comédie
+                    </label>
+
+                    <label class="radio_option">
+                        <input type="checkbox" name="genres[]" value="drame">
+                        🎭 Drame
+                    </label>
+
+                    <label class="radio_option">
+                        <input type="checkbox" name="genres[]" value="horreur">
+                        😱 Horreur / Thriller
+                    </label>
+
+                    <label class="radio_option">
+                        <input type="checkbox" name="genres[]" value="scifi">
+                        🚀 Science-fiction
+                    </label>
+
+                    <label class="radio_option">
+                        <input type="checkbox" name="genres[]" value="romance">
+                        ❤️ Romance
+                    </label>
+
+                    <label class="radio_option">
+                        <input type="checkbox" name="genres[]" value="documentaire">
+                        🎞️ Documentaire
+                    </label>
+                </fieldset>
+
+                <div class="form_group">
+                    <label class="form_label">Langues de films (maintenir Ctrl/Cmd pour sélection
+                        multiple) :</label>
+                    <select name="langues[]" class="form_field" multiple size="5">
+                        <option value="ar">العربية (Arabe)</option>
+                        <option value="fr" selected>Français</option>
+                        <option value="en">English</option>
+                        <option value="es">Español</option>
+                        <option value="autre">Autre</option>
+                    </select>
+                </div>
+
+                <div class="form_group">
+                    <label class="form_label">Réalisateur préféré (recherche) :</label>
+                    <input type="search" name="realisateur" class="form_field"
+                        placeholder="Ex: Hitchcock, Kubrick, Tarantino...">
+                </div>
+
+                <div class="form_group">
+                    <label class="form_label">Site ou blog cinéma que vous suivez :</label>
+                    <input type="url" name="site" class="form_field" placeholder="https://exemple.com">
+                </div>
+            </section>
+            <section class="section">
+                <h2>🗓️ Disponibilites et preferences</h2>
+
+                <div class="row">
+                    <div class="form_group">
+                        <label class="form_label">Semaine prefere :</label>
+                        <input type="week" name="best_week" class="form_field">
+                    </div>
+                    <div class="form_group">
+                        <label class="form_label">Horaire prefere :</label>
+                        <input type="time" name="time" class="form_field">
+                    </div>
+                </div>
+                <div class="form_group">
+                    <label class="form_label">Premiere seance souhaitee :</label>
+                    <input type="datetime-local" name="date-time" class="form_field">
+                </div>
+                <div class="form_group">
+                    <label class="form_label">À quelle fréquence allez-vous au cinéma actuellement
+                        ?</label>
+                    <div class="range_row">
+                        <input type="range" name="frequence" min="0" max="20" value="4"
+                            oninput="document.getElementById('freq_val').textContent = this.value">
+                        <output id="freq_val" class="range_value">4</output>
+                        <span>fois/mois</span>
+                    </div>
+                </div>
+
+                <div class="form_group">
+                    <label class="form_label">Couleur de votre carte de membre :</label>
+                    <input type="color" name="couleur" class="form_color" value="#e8404c">
+                </div>
+            </section>
+            <section class="section">
+                <h2>📎Documents et informations complementaires</h2>
+
+                <div class="form_group">
+                    <label class="form_label">Photo d'identite(pour la carte) :</label>
+                    <input type="file" name="photo_id" class="form_file" accept="image/*">
+                </div>
+                <div class="form_group">
+                    <label class="form_label">justificatif etudiant (optionnel, -20% sur l'abonnement):</label>
+                    <input type="file" name="justificatif_etd" class="form_file" accept="image/*,.pdf">
+                </div>
+                <div class="form_group">
+                    <label class="form_label">Parlez-nous de votre passion pour le cinema :</label>
+                     <textarea name="passion" class="form_field" rows="5"
+            placeholder="Quel est votre film préféré ? Pourquoi aimez-vous le cinéma ? Des suggestions pour le club ?"></textarea>
+                </div>
+
+                <input type="hidden" name="parrainage" value="CINEPASS2025">
+                <small class="form_note">Code de parrainage appliqué automatiquement</small>
+
+            </section>
+            <div class="btn">
+            <button type="submit" id="join">🎬 rejoindre CinePass</button>
+        </div>
+        </form>
+    </main>
+</div>
+</body>
+
+</html>

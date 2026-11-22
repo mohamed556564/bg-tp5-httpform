@@ -1,0 +1,216 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    height: auto;
+    min-height: 120px;
+    background-image: url("cinepass-background.png");
+    background-size: cover;
+    background-position: right top;
+    background-repeat: no-repeat;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    padding-top: 20px;
+    margin-bottom: 50px;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+.container {
+    width: 95%;
+    max-width: 900px;
+    margin: 30px auto;
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.content {
+    padding: 0 30px 20px;
+}
+
+header h1 {
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+
+header>p {
+    font-weight: 400;
+    padding-top: 20px;
+}
+
+#info {
+    width: 100%;
+    background-color: #FFF1CE;
+    border-left: 4px solid #F7C01C;
+    border-radius: 10px;
+    padding: 15px 20px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+
+    font-size:14px;
+    color: #BA7D0A;
+
+}
+
+.section {
+    width: 100%;
+    background-color: #F8FAFB;
+    border-left: 4px solid #E8405C;
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    padding: 40px 20px;
+    margin: 30px auto;
+}
+
+.section h2 {
+    font-size: 20px;
+    margin: 0 0 13px 0;
+}
+
+
+.row {
+    display: grid;
+    grid-template-columns: repeat(2,minmax(0,1fr));
+    gap: 12px;
+}
+
+.form_group {
+    display: flex;
+    flex-direction: column;
+    margin-top: 16px;
+    width: 100%;
+}
+
+.form_label {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.form_field {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}
+
+.form_fieldset {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px 20px;
+    margin: 0 0 16px 0;
+}
+
+.form_fieldset legend {
+    color: #e8405e;
+    font-weight: 700;
+    padding: 0 10px;
+}
+
+.radio_option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px;
+    margin: 6px 0;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.radio_option input {
+    accent-color: #e8405e;
+    width: 18px;
+    height: 18px;
+}
+
+.range_row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.range_row input[type="range"] {
+    flex: 1;
+    accent-color: #e8405e;
+}
+
+.range_value {
+    background: #e8405e;
+    color: white;
+    font-weight: 700;
+    min-width: 50px;
+    text-align: center;
+    padding: 6px 14px;
+    border-radius: 20px;
+}
+
+.form_color {
+    width: 70px;
+    height: 40px;
+    padding: 2px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.form_file {
+    width: fit-content;
+    max-width: 100%;
+    padding: 10px 14px;
+    border: 2px dashed #ddd;
+    border-radius: 8px;
+    background: #fff;
+    font-size: 14px;
+}
+
+textarea.form_field {
+    resize: vertical;
+}
+
+.form_note {
+    display: block;
+    margin-top: 16px;
+    font-size: 12px;
+    color: #777;
+}
+
+.submit_zone {
+    text-align: center;
+    margin: 30px 0 50px 0;
+}
+
+#join{
+    background: linear-gradient(135deg, #e8405e, #c42a4a);
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 16px 40px;
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0 6px 16px rgba(232, 64, 94, 0.4);
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn{
+    display: flex;
+    justify-content: center;
+    margin: 30px 0 50px 0;
+}
+
+#join:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(232, 64, 94, 0.5);
+}
